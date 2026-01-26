@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+
+# Spark
+*.parquet
+*.orc
+
+# Data files
+data/raw/*
+data/processed/*
+
+# OS
+.DS_Store
+
