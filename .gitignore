@@ -7,8 +7,9 @@ __pycache__/
 *.orc
 
 # Data files
-data/raw/*
-data/processed/*
+#data/raw/*
+#data/processed/*
+data/
 
 # OS
 .DS_Store
