@@ -2,39 +2,36 @@
 
 ## 📖 Overview
 
-This project implements an end-to-end batch ETL pipeline for an
-e-commerce dataset using PySpark.
+This project implements an end-to-end batch ETL pipeline for an e-commerce dataset using PySpark.
 
-The pipeline demonstrates core Data Engineering concepts such as data
-ingestion, transformation, validation, and loading into an
-analytics-ready warehouse.
+The pipeline demonstrates core Data Engineering concepts such as data ingestion, transformation,Data Modelling using STAR schema, validation, and loading into an analytics-ready warehouse.
 
 ------------------------------------------------------------------------
 
 ## 🏗️ Architecture
 
-Raw Data (CSV/JSON)\
-⬇\
-Extract Layer\
-⬇\
-Ingestion Layer\
-⬇\
-Transformation Layer\
-⬇\
-Validation Layer\
-⬇\
-Data Modelling (Fact & Dimension Tables)\
-⬇\
+Raw Data (CSV/JSON)
+⬇
+Extract Layer
+⬇
+Ingestion Layer
+⬇
+Transformation Layer
+⬇
+Data Modelling (Fact & Dimension Table)
+⬇
+Validation Layer
+⬇
 Load Layer (Warehouse - Parquet)
 
 ------------------------------------------------------------------------
 
 ## 🛠️ Tech Stack
 
--   Python\
--   PySpark\
--   Spark SQL\
--   Linux\
+-   Python
+-   PySpark
+-   Spark SQL
+-   Linux
 -   Git & GitHub
 
 ------------------------------------------------------------------------
@@ -58,47 +55,51 @@ ecommerce-etl/ │ ├── data/ │ ├── raw/\
 
 ### ✅ Data Extraction
 
--   Extracted data from CSV & JSON sources\
--   Applied schema using StructType\
+-   Extracted data from CSV & JSON sources
+-   Applied schema using StructType
 -   Handled corrupt records
 
 ### ✅ Data Ingestion
 
--   Loaded data into PySpark DataFrames\
+-   Loaded data into PySpark DataFrames
 -   Standardized schema across datasets
 
 ### ✅ Data Transformation
 
--   Removed duplicates\
--   Handled NULL values\
--   Performed joins across multiple datasets\
+-   Removed duplicates
+-   Handled NULL values
+-   Performed joins across multiple datasets
 -   Applied business transformations
 
-### ✅ Data Validation
-
--   Null checks\
--   Duplicate checks\
--   Basic data quality validations
 
 ### ✅ Data Modelling
 
--   Created Fact table: `fact_sales`\
+-   Created Fact table: `fact_sales`
 -   Created Dimension tables:
     -   `dim_customers`
     -   `dim_products`
     -   `dim_payments`
 
+
+### ✅ Data Validation
+
+-   Null checks
+-   Duplicate checks
+-   Basic data quality validations
+
+
 ### ✅ Data Loading
 
--   Stored final data in Parquet format\
--   Organized into a warehouse layer\
+-   Stored final data in Parquet format
+-   Organized into a warehouse layer
 -   Optimized for analytics
+
 
 ------------------------------------------------------------------------
 
 ## ▶️ How to Run the Project
 
-cd ecommerce-etl python src/main.py
+cd ecommerce-etl/src/ spark-submit main.py
 
 ------------------------------------------------------------------------
 
@@ -106,16 +107,16 @@ cd ecommerce-etl python src/main.py
 
 data/warehouse/
 
--   Fact and dimension tables\
+-   Fact and dimension tables
 -   Ready for analytics
 
 ------------------------------------------------------------------------
 
 ## 🎯 Learning Outcomes
 
--   Built a complete ETL pipeline using PySpark\
--   Implemented real-world data cleaning & validation\
--   Designed fact and dimension data models\
+-   Built a complete ETL pipeline using PySpark
+-   Implemented real-world data cleaning & validation
+-   Designed fact and dimension data models
 -   Worked with distributed data processing
 
 ------------------------------------------------------------------------
@@ -128,7 +129,5 @@ Completed
 
 ## 💡 Future Enhancements
 
--   Load data into SQL warehouse (PostgreSQL / Snowflake)\
--   Add Airflow for orchestration\
--   Implement partitioning & performance tuning\
--   Add unit testing
+-   Load data into SQL warehouse (PostgreSQL / Snowflake)
+-   Add Airflow for orchestration

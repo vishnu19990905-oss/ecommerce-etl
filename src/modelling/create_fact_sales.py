@@ -11,8 +11,7 @@ def create_fact_sales(df):
         col("shipping_charges"),
         col("item_total_amount"),
         col("payment_value"),
-        col("delivery_time_days"),
-        col("payment_type")
+        col("delivery_time_days")
     )
 
     return fact_sales
